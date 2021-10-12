@@ -1,0 +1,7 @@
+{
+    "Inline": {
+        "NoGPSAndQuery": "Bitte gib einen Ort an oder erlaube der Anfrage GPS",
+        "NoGPSAndQueryTitle": "Fehlerhafte Anfrage",
+        "NoGPSAndQuerydescription": "Keine Daten"
+    }
+}
