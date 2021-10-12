@@ -15,8 +15,8 @@ const bot = new Telebot({
 bot.start(); //Telegram bot start
 
 bot.on(/^\/start$/i, (msg) => {
-	let startmsg = newi18n.translate(startmsg)
-	msg.reply.text(startmsg, { parseMode: 'markdown' });
+	let startmsg = newi18n.translate("startmsg")
+	msg.reply.text(startmsg, { parseMode: 'html' });
 });
 
 bot.on('inlineQuery', msg => {
@@ -50,7 +50,6 @@ bot.on('inlineQuery', msg => {
 				photo_url: `https://v2.wttr.in/${msg.query}.png?lang=en`
 			});
 			
-			console.log(answers)
 			return bot.answerQuery(answers);
 		}else{
 			Message = newi18n.translate("Inline.NoGPSAndQuery")
