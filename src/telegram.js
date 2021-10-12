@@ -19,6 +19,11 @@ bot.on(/^\/start$/i, (msg) => {
 	msg.reply.text(startmsg, { parseMode: 'html' });
 });
 
+bot.on(/^\/help$/i, (msg) => {
+	let helpmsg = newi18n.translate("helpmsg")
+	msg.reply.text(helpmsg, { parseMode: 'html' });
+});
+
 bot.on('inlineQuery', msg => {
 	
 	const answers = bot.answerList(msg.id, {cacheTime: 1});

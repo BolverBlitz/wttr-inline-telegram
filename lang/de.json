@@ -1,5 +1,6 @@
 {
     "startmsg": "Test",
+    "helpmsg": "/start - Zeigt Start Nachricht\n/help - Zeigt Hilfe Nachricht\n/setup - Gruppeneinrichtung",
     "Inline": {
         "NoGPSAndQuery": "Bitte gib einen Ort an oder erlaube der Anfrage GPS",
         "NoGPSAndQueryTitle": "Fehlerhafte Anfrage",
