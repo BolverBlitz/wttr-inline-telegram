@@ -3,7 +3,7 @@ const util = require('util')
 const path = require('path');
 const reqPath = path.join(__dirname, '../');
 const { default: i18n } = require('new-i18n');
-const newi18n = new i18n({ folder: path.join(reqPath, process.env.Sprache), languages: ['de'], fallback: 'de' })
+const newi18n = new i18n({ folder: path.join(reqPath, process.env.Sprache), languages: ['de','en'], fallback: 'en' })
 
 const Telebot = require('telebot');
 const bot = new Telebot({
@@ -13,6 +13,11 @@ const bot = new Telebot({
 });
 
 bot.start(); //Telegram bot start
+
+bot.on(/^\/start$/i, (msg) => {
+	let startmsg = newi18n.translate(startmsg)
+	msg.reply.text(startmsg, { parseMode: 'markdown' });
+});
 
 bot.on('inlineQuery', msg => {
 	
@@ -32,19 +37,20 @@ bot.on('inlineQuery', msg => {
 		return bot.answerQuery(answers);
 	}else{
 		if(msg.query.length > 1){
-			
+			/* Does not work with TG for some reason lol*/
 			answers.addPhoto({
-				id: '1',
+				id: 1,
 				thumb_url: `https://wttr.in/${msg.query}.png?lang=en`,
 				photo_url: `https://wttr.in/${msg.query}.png?lang=en`
 			});
-			/* Does not work with TG for some reason lol
+			
 			answers.addPhoto({
-				id: '2',
+				id: 2,
 				thumb_url: `https://v2.wttr.in/${msg.query}.png?lang=en`,
 				photo_url: `https://v2.wttr.in/${msg.query}.png?lang=en`
 			});
-			*/
+			
+			console.log(answers)
 			return bot.answerQuery(answers);
 		}else{
 			Message = newi18n.translate("Inline.NoGPSAndQuery")
