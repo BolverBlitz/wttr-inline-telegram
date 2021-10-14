@@ -1,6 +1,10 @@
 {
     "startmsg": "<b>Wellcome to EBG_Weather Bot</b>\nThis bot can send you a weather forcase of your current location or you can set it up in a group to provide you daily with the weather of today.\n\nThis Bot supports multiple languages and has a easy to use UI",
     "helpmsg": "/start - Displays start message\n/help - Displays help message\n/setup - Setup for groups",
+    "setup": {
+        "help": "Please name a city behind the command. Like '/setup Berlin'",
+        "nopermissions": "You need to be chat admin!"
+    },
     "Inline": {
         "NoGPSAndQuery": "Please provide a location or allow GPS usage",
         "NoGPSAndQueryTitle": "Bad request",
