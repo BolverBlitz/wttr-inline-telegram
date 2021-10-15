@@ -1,0 +1,13 @@
+{
+    "startmsg": "<b>Benvenuto su EBG_Weather Bot</b>\nQuesto bot può mandarti le previsioni meteo per la tua posizione attuale oppure puoi aggiungerlo ad un gruppo per ottenere le previsioni di giorno in giorno.\n\nQuesto bot supporta varie lingue ed con una semplice interfaccia",
+    "helpmsg": "/start - Mostra il messaggio di benvenuto\n/help - Mostra il messaggio di aiuto\n/setup - Configura per gruppi",
+    "setup": {
+        "help": "Indicare un nome di città dopo il comando. Esempio '/setup Roma'",
+        "nopermissions": "Devi essere amministratore della chat!"
+    },
+    "Inline": {
+        "NoGPSAndQuery": "Si prega di specificare una posizione o consentire l'utilizzo del GPS",
+        "NoGPSAndQueryTitle": "Richiesta errata",
+        "NoGPSAndQuerydescription": "Nessun dato"
+    }
+}
